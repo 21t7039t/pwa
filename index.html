@@ -6,6 +6,23 @@
 
 </head>
 	<h1>hello world</h1>
+	<script>
+		function addRow() {
+			// テーブルを取得
+			const table = document.getElementById("main-table");
+
+			// 新しい行を挿入
+			const newRow = table.insertRow();
+
+			// 新しいセルを作成
+			for (let i = 0; i < 3; i++) {
+				const cell1 = newRow.insertCell();
+				const data=document.getElementById('d1');
+				cell1.innerText = data.value;
+			}
+		}
+	</script>
+	<input type="time"  id="d1">
 	<button onclick="addRow()">ADD ROW</button>
 	<table id="main-table">
 		<tr>
